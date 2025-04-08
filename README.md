@@ -55,6 +55,7 @@ Identificar locais de possíveis alterações no código, incluindo:
 | Local                      | Descrição                                                                 | Sugestão                                       |
 |----------------------------|---------------------------------------------------------------------------|------------------------------------------------|
 | app/Domains/User/create e app/Domains/User/Update   |  Uso de dependência direta do Laravel (Hash::make()) viola o princípio de separação de responsabilidades | criar um Service de Integração com a dependência do laravel para gerar o hash da senha                     |
+|app/Domains/User/create e app/Domains/User/Update         | validação de tipo de usuário utilizando in_array com strings fixas diretamente no método, gerando repetição de codigo em lugares diferentes           |  criar uma class de constants (UserType) e refatorar a chamada no domain, que passaria a usar algo como (!UserType::isValid($this->type))            |
 
 ---
 
