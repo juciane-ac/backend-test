@@ -15,20 +15,20 @@ Identificar locais de possíveis alterações no código, incluindo:
 
 | Tipo                        | Quantidade |
 |-----------------------------|------------|
-| Possíveis erros             |          |
-| Melhorias de performance    |          |
-| Vulnerabilidades            |        |
-| Problemas arquiteturais     |           |
-| Problemas de nomeação e legibilidade     |           |
+| Possíveis erros             |  1        |
+| Melhorias de performance    | 1         |
+| Vulnerabilidades            |  1      |
+| Problemas arquiteturais     |  2         |
+| Problemas de nomeação e legibilidade     |    3       |
 
 ---
 
 ## 1. Possíveis Erros
 
-| Local (arquivo:linha)      | Descrição                                                                 | Sugestão                                       |
+| Local      | Descrição                                                                 | Sugestão                                       |
 |----------------------------|---------------------------------------------------------------------------|------------------------------------------------|
-|  |  |            |
-|                            |                                                                           |                                                |
+| Requests/User | A validação atual dos campos de document (CPF,CNPJ da companhia) apenas verifica a quantidade de dígitos, não verificando a integridade dos dados, permitindo que dados como  como 00000000000 sejam passados, podendo contribuir para fraudes | criar rules customizadas ou utilizar pacotes de validações existentes, que sejam capazes de validar o formato, o dígito verificador e impedir inserir sequências de números repetidos.           |
+
 
 ---
 
