@@ -54,7 +54,7 @@ Identificar locais de possíveis alterações no código, incluindo:
 
 | Local                      | Descrição                                                                 | Sugestão                                       |
 |----------------------------|---------------------------------------------------------------------------|------------------------------------------------|
-|    |                                 |                      |
+| app/Domains/User/create e app/Domains/User/Update   |  Uso de dependência direta do Laravel (Hash::make()) viola o princípio de separação de responsabilidades | criar um Service de Integração com a dependência do laravel para gerar o hash da senha                     |
 
 ---
 
@@ -62,8 +62,8 @@ Identificar locais de possíveis alterações no código, incluindo:
 
 | Local                      | Descrição                                                                 | Sugestão                                       |
 |----------------------------|---------------------------------------------------------------------------|------------------------------------------------|
-| App/UseCases/User/show   |    Nome do arquivo não segue convenção de nomenclatura                             | Renomear para Show.php                     |
-| App/UseCases/User/show   |    Nome de variávies genéricas, sem significado real ($a,$b,$c)                          | Usar nomes concretos, condizentes com o que a variável armazena ($userid,$companyId,$user)                   |
+| app/UseCases/User/show   |    Nome do arquivo não segue convenção de nomenclatura                             | Renomear para Show.php                     |
+| app/UseCases/User/show   |    Nome de variávies genéricas, sem significado real ($a,$b,$c)                          | Usar nomes concretos, condizentes com o que a variável armazena ($userid,$companyId,$user)                   |
 
 
 
