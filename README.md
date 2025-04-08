@@ -36,8 +36,8 @@ Identificar locais de possíveis alterações no código, incluindo:
 
 | Local                      | Descrição                                                                 | Sugestão                                       |
 |----------------------------|---------------------------------------------------------------------------|------------------------------------------------|
-|  |                               |                        |
-|                            | `                                            |   |
+| database > tabelas users e companies | campos de documentos com tamanho 255, ocupando mais espaço do que precisam e deveriam, isso pode ser um gasto desnecessário de espaço em disco principalmente se considerar o cenário de um BD com uma grande quantidade de dados, além disso o campo modelado assim pode impactar negativamente nas consultas e também fazer com que validações ou buscas por esses documentos sejam comprometidas                           | limitar apenas ao tamanho necessário para a numeração padrão do documento (CNPJ, CPF, etc)                       |
+
 
 ---
 
