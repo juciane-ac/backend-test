@@ -62,7 +62,8 @@ Identificar locais de possíveis alterações no código, incluindo:
 
 | Local                      | Descrição                                                                 | Sugestão                                       |
 |----------------------------|---------------------------------------------------------------------------|------------------------------------------------|
-|    |                                 |                      |
+| App/UseCases/User/show   |    Nome do arquivo não segue convenção de nomenclatura                             | Renomear para Show.php                     |
+| App/UseCases/User/show   |    Nome de variávies genéricas, sem significado real ($a,$b,$c)                          | Usar nomes concretos, condizentes com o que a variável armazena ($userid,$companyId,$user)                   |
 
 
 
