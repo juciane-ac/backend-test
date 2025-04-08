@@ -45,7 +45,7 @@ Identificar locais de possíveis alterações no código, incluindo:
 
 | Local                      | Descrição                                                                 | Sugestão                                       |
 |----------------------------|---------------------------------------------------------------------------|------------------------------------------------|
-|   |                               |           |
+|app/Repositories/User   | Possível vulnerabilidade a sql injection, através do uso de whereRaw nas consultas, uma vez que instruções brutas serão injetadas na consulta como strings, e o laravel não garante que consultas assim estejam protegidas contra ataques de SQL Injection                          | utilizar os bindings do laravel, exemplo:  $this->builder->whereNull('accounts.id');          |
 |  |                 |         |
 
 ---
