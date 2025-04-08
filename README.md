@@ -64,7 +64,8 @@ Identificar locais de possíveis alterações no código, incluindo:
 | Local                      | Descrição                                                                 | Sugestão                                       |
 |----------------------------|---------------------------------------------------------------------------|------------------------------------------------|
 | app/UseCases/User/show   |    Nome do arquivo não segue convenção de nomenclatura                             | Renomear para Show.php                     |
-| app/UseCases/User/show   |    Nome de variávies genéricas, sem significado real ($a,$b,$c)                          | Usar nomes concretos, condizentes com o que a variável armazena ($userid,$companyId,$user)                   |
+| app/UseCases/User/show   |    Nome de variávies genéricas, sem significado real ($a,$b,$c)                          | Usar nomes concretos, condizentes com o que a variável armazena ($userid,$companyId,$user) |
+| app/Domains/User e app/Domains/Company | Mensagens de erro genéricas (Não é possível adicionar o...) no caso de adicionar dados que são únicos e já estão associados a um cadastro, dificultando o tratamento preciso dos erros | utilizar exceções específicas como por exemplo CnpjAlreadyinUseException |
 
 
 
